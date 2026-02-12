@@ -15,7 +15,7 @@ public:
         timer_ = this->create_wall_timer(
             100ms, std::bind(&FakeRPLidar::publish_scan, this));
 
-        RCLCPP_INFO(this->get_logger(), "Fake RPLIDAR started");
+        RCLCPP_INFO(this->get_logger(), "Fake lidar node started");
     }
 
 
@@ -27,9 +27,12 @@ private:
         scan.header.stamp = this->now();
         scan.header.frame_id = "laser_frame";
 
+        // 360 points between -pi and pi, 1 degree apart
         scan.angle_min = -M_PI;
         scan.angle_max = M_PI;
         scan.angle_increment = M_PI / 180.0;  // 360 points
+
+        
         scan.scan_time = 0.1;
         scan.time_increment = scan.scan_time / 360.0;
         scan.range_min = 0.15;

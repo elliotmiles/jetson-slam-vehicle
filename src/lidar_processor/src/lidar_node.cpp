@@ -19,6 +19,9 @@ public:
             10,
             std::bind(&LidarNode::scan_callback, this, std::placeholders::_1));
 
+
+        publisher_ = this->create_publisher<sensor_msgs::msg::LaserScan>("/scan_processed", 10);
+
         timer_ = this->create_wall_timer(
             500ms, std::bind(&LidarNode::timer_callback, this));
         
@@ -73,6 +76,7 @@ private:
 
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr subscriber_;
+    rclcpp::Publisher<sensor_msgs::msg::LaserScan>::SharedPtr publisher_;
     sensor_msgs::msg::LaserScan::SharedPtr last_scan_;
 };
 
