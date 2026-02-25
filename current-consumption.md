@@ -7,3 +7,4 @@
 | Motors | JGB37-520 | 2 | 2.4 |
 | Motor Drivers | L298N | 2 | 0.2 |
 | Cooling Fans | JZK-M469638U | 2 | 0.4 | 
+| TOTAL PEAK CURRENT |       | | 9.2 |
