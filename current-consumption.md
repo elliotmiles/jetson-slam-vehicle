@@ -4,7 +4,7 @@
 | LiDAR sensor | RPLIDAR A1 | 1 | 1.0 |
 | MCU | Teensy 4.1 | 1 | 0.1 |
 | IMU | BNO085 | 1 | 0.1 |
-| Motors | JGB37-520 | 2 | 2.4 |
-| Motor Drivers | L298N | 2 | 0.2 |
+| Motors | - | 2 | 14 |
+| Motor Drivers | - | 2 | 0.2 |
 | Cooling Fans | JZK-M469638U | 2 | 0.4 | 
-| TOTAL PEAK CURRENT |       | | 9.2 |
+| TOTAL PEAK CURRENT |       | | 20.6 |
